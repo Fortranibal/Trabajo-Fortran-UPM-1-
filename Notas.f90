@@ -41,35 +41,35 @@ write(*,*) "Curso=", Curso
 Clase= line(17:18)
 write(*,*) "Clase=", Clase
 
-S1=line(41:50)    
-write(*,*)"Solucion 1= ", S1                                            !relaccion entre el DNI y la respuesta pregunta 1-10
+R1=line(41:50)    
+write(*,*)"Respuesta 1= ", R1                                            !relaccion entre el DNI y la respuesta pregunta 1-10
 
-S2=line(51:60)    
-write(*,*)"Solucion 2= ", S2           
+R2=line(51:60)    
+write(*,*)"Respuesta 2= ", R2           
 
-S3=line(61:70)    
-write(*,*)"Solucion 3= ", S3           
+R3=line(61:70)    
+write(*,*)"Respuesta 3= ", R3           
 
-S4=line(71:80)    
-write(*,*)"Solucion 4= ", S4          
+R4=line(71:80)    
+write(*,*)"Respuesta 4= ", R4          
 
-S5=line(81:90)    
-write(*,*)"Solucion 5= ", S5          
+R5=line(81:90)    
+write(*,*)"Respuesta 5= ", R5          
 
-S6=line(91:100)  
-write(*,*)"Solucion 6= ", S6           
+R6=line(91:100)  
+write(*,*)"Respuesta 6= ", R6           
 
-S7=line(101:110)  
-write(*,*)"Solucion 7= ", S7           
+R7=line(101:110)  
+write(*,*)"Respuesta 7= ", R7           
 
-S8=line(111:120)  
-write(*,*)"Solucion 8= ", S8           
+R8=line(111:120)  
+write(*,*)"Respuesta 8= ", R8           
 
-S9=line(121:130)  
-write(*,*)"Solucion 9= ", S9           
+R9=line(121:130)  
+write(*,*)"Respuesta 9= ", R9           
 
-S10=line(131:140) 
-write(*,*)"Solucion 10= ", S10        
+R10=line(131:140) 
+write(*,*)"Respuesta 10= ", R10        
 
 
 read (*,*)
@@ -96,35 +96,35 @@ do
  
 write(*,*) line
 
-R1=line(41:50)    
-write(*,*)"Respuesta Correcta 1= ", R1           !relaccion entre el DNI y la respuesta pregunta 1
+S1=line(41:50)    
+write(*,*)"Respuesta Correcta 1= ", S1           !relaccion entre el DNI y la respuesta pregunta 1
 
-R2=line(51:60)    
-write(*,*)"Respuesta Correcta 2= ", R2           !relaccion entre el DNI y la respuesta pregunta 2
+S2=line(51:60)    
+write(*,*)"Respuesta Correcta 2= ", S2           !relaccion entre el DNI y la respuesta pregunta 2
 
-R3=line(61:70)    
-write(*,*)"Respuesta Correcta 3= ", R3           !relaccion entre el DNI y la respuesta pregunta 3
+S3=line(61:70)    
+write(*,*)"Respuesta Correcta 3= ", S3           !relaccion entre el DNI y la respuesta pregunta 3
 
-R4=line(71:80)    
-write(*,*)"Respuesta Correcta 4= ", R4           !relaccion entre el DNI y la respuesta pregunta 4
+S4=line(71:80)    
+write(*,*)"Respuesta Correcta 4= ", S4           !relaccion entre el DNI y la respuesta pregunta 4
 
-R5=line(81:90)    
-write(*,*)"Respuesta Correcta 5= ", R5           !relaccion entre el DNI y la respuesta pregunta 5
+S5=line(81:90)    
+write(*,*)"Respuesta Correcta 5= ", S5           !relaccion entre el DNI y la respuesta pregunta 5
 
-R6=line(91:100)  
-write(*,*)"Respuesta Correcta 6= ", R6           !relaccion entre el DNI y la respuesta pregunta 6
+S6=line(91:100)  
+write(*,*)"Respuesta Correcta 6= ", S6           !relaccion entre el DNI y la respuesta pregunta 6
 
-R7=line(101:110)  
-write(*,*)"Respuesta Correcta 7= ", R7           !relaccion entre el DNI y la respuesta pregunta 7
+S7=line(101:110)  
+write(*,*)"Respuesta Correcta 7= ", S7           !relaccion entre el DNI y la respuesta pregunta 7
 
-R8=line(111:120)  
-write(*,*)"Respuesta Correcta 8= ", R8           !relaccion entre el DNI y la respuesta pregunta 8
+S8=line(111:120)  
+write(*,*)"Respuesta Correcta 8= ", S8           !relaccion entre el DNI y la respuesta pregunta 8
 
-R9=line(121:130)  
-write(*,*)"Respuesta Correcta 9= ", R9           !relaccion entre el DNI y la respuesta pregunta 9
+S9=line(121:130)  
+write(*,*)"Respuesta Correcta 9= ", S9           !relaccion entre el DNI y la respuesta pregunta 9
 
-R10=line(131:140) 
-write(*,*)"Respuesta Correcta 10= ", R10          !relaccion entre el DNI y la respuesta pregunta 10
+S10=line(131:140) 
+write(*,*)"Respuesta Correcta 10= ", S10          !relaccion entre el DNI y la respuesta pregunta 10
 
 read(*,*)
 
