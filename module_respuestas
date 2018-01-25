@@ -7,18 +7,16 @@ Character(len=1) :: Curso                                               ! Grupo 
 Character(len=2) :: Clase                                               ! Clase del alumno - 2 caracteres
 character(len=500) line
 
-integer :: udata , EoF
 
 
 
-
-open(file= "p1_T7.txt", newunit = udata)
+open(unit=1, file= "p1_T7.txt")
 
 
  do 
- read(unit = udata, iostat = EoF , fmt = '(A)') line                    !lector primera linea (fila)
+ read(unit=1, fmt = '(A)') line                    !lector primera linea (fila)
 
- 
+ read(*,*)
 write(*,*) line
 
 
@@ -65,13 +63,6 @@ R10=line(131:140)
 write(*,*)"Respuesta 10= ", R10        
 
 read(*,*)
-
-
-if (EoF<0)then                                                          !if (EoF>-1) termina el bucle tras solo un ciclo
-        exit
-    else
-    end if
-
 
  end do
 
