@@ -139,7 +139,7 @@ end do
 read (*,*)
 
 N= 0
-D= R1-S1
+D= S1-R1
 do
 
 if (D < 1*10-4) then 
