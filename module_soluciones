@@ -1,0 +1,43 @@
+program module_soluciones
+
+implicit none
+character(len=13):: S1, S2, S3, S4, S5, S6, S7, S8, S9, S10
+character(len=200) line
+
+open(file= "solutions.csv", unit=2)
+
+
+
+
+read(unit=2, fmt = '(A)') line   !lector primera linea (fila)   !iostat=EoF ,,, integer :: EoF     if EoF<0, exit else end if
+
+S1=line(17:29)  
+S2=line(30:41)  
+S3=line(61:70) 
+S4=line(71:80) 
+S5=line(81:90)  
+S6=line(91:100) 
+S7=line(101:110) 
+S8=line(111:120) 
+S9=line(121:130) 
+S10=line(131:140) 
+
+
+
+
+write(*,*)"Solucion 1= ", S1           !relaccion entre el DNI y la respuesta pregunta 1
+write(*,*)"Solucion 2= ", S2           !relaccion entre el DNI y la respuesta pregunta 2
+write(*,*)"Solucion 3= ", S3           !relaccion entre el DNI y la respuesta pregunta 3
+write(*,*)"Solucion 4= ", S4           !relaccion entre el DNI y la respuesta pregunta 4
+write(*,*)"Solucion 5= ", S5           !relaccion entre el DNI y la respuesta pregunta 5
+write(*,*)"Solucion 6= ", S6           !relaccion entre el DNI y la respuesta pregunta 6
+write(*,*)"Solucion 7= ", S7           !relaccion entre el DNI y la respuesta pregunta 7
+write(*,*)"Solucion 8= ", S8           !relaccion entre el DNI y la respuesta pregunta 8
+write(*,*)"Solucion 9= ", S9           !relaccion entre el DNI y la respuesta pregunta 9
+write(*,*)"Solucion 10= ", S10          !relaccion entre el DNI y la respuesta pregunta 10
+
+read(*,*)
+
+
+
+end program
