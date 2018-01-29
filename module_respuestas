@@ -6,18 +6,17 @@ character(len=6) :: Expediente                                          ! Numero
 Character(len=1) :: Curso                                               ! Grupo del alumno - 1 caracter
 Character(len=2) :: Clase                                               ! Clase del alumno - 2 caracteres
 character(len=500) line
-
+integer :: EoF
 
 
 
 open(unit=1, file= "p1_T7.txt")
 
 
- do 
- read(unit=1, fmt = '(A)') line                    !lector primera linea (fila)
+
+ read(unit=1, iostat=EoF , fmt = '(A)') line                                         !lector primera linea (fila)
 
  read(*,*)
-write(*,*) line
 
 
 DNI= line(1:8)
@@ -63,7 +62,5 @@ R10=line(131:140)
 write(*,*)"Respuesta 10= ", R10        
 
 read(*,*)
-
- end do
 
 end program
