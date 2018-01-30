@@ -1,66 +1,103 @@
-Program module_respuestas
-
-character(len=8):: DNI
-character(len=10):: R1, R2, R3, R4, R5, R6, R7, R8, R9, R10
+program module_respuestas
+implicit none
+character(len=8) :: DNI
+character (len=10) :: R1, R2, R3, R4, R5, R6, R7, R8, R9, R10
 character(len=6) :: Expediente                                          ! Numero de expediente del alumno - 6 caracteres
 Character(len=1) :: Curso                                               ! Grupo del alumno - 1 caracter
 Character(len=2) :: Clase                                               ! Clase del alumno - 2 caracteres
 character(len=500) line
-integer :: EoF
-
+real :: W1,W2,W3,W4,W5,W6,W7,W8,W9,W10, expW1, expW2, expW3, expW4, expW5, expW6, expW7, expW8, expW9, expW10
+character (len=3) :: exp1, exp2, exp3, exp4, exp5, exp6, exp7, exp8, exp9, exp10 
+integer :: EoF !!
 
 
 open(unit=1, file= "p1_T7.txt")
 
 
-
- read(unit=1, iostat=EoF , fmt = '(A)') line                                         !lector primera linea (fila)
+ do 
+ read(unit=1, iostat=EoF, fmt = '(A)') line                    !lector primera linea (fila)
 
  read(*,*)
 
 
 DNI= line(1:8)
 write(*,*) "DNI=", DNI                                                  !Datos del alumno puestos en el examen
-
 Expediente= line(9:14)
 write(*,*) "Expediente=", Expediente
-
 Curso= line(15:16)
 write(*,*) "Curso=", Curso
-
 Clase= line(17:18)
 write(*,*) "Clase=", Clase
 
-R1=line(41:50)    
-write(*,*)"Respuesta 1= ", R1                                            !relaccion entre el DNI y la respuesta pregunta 1-10
+R1=line(41:47) 
+read(R1,*), W1
+exp1 = line (48:50)
+read(exp1,*), expW1
+write(*,*)"Respuesta 1= ", W1*(10**(-5.))                               
+!COSAS QUE FALLAN: 
+!1. NO SE LE DA USO A NINGUN expW(i) <y yo nose como>  ,,,    
+!2. SI COMPILAS, SALE CON MUCHOS 000, DESPUES DE LA RESPUESTA (y algun numero que no entiendo porque está asi) ,,,
+!3. SI COMPILAS EL PROGRAMA TAL CUAL SALE QUE EN LA LINEA 77 LLEGA AL END OF FILE (???) <ya he probado si es la chapuza del " *(10**(-5.)) "y le pasa lo mismo sin eso>
+!<el problema 3 puede ser por causa del 2>
+                                          
 
-R2=line(51:60)    
-write(*,*)"Respuesta 2= ", R2           
+R2=line(51:57)  
+read(R2,*), W2
+exp2 = line (58:60)
+read(exp2,*), expW2  
+write(*,*)"Respuesta 2= ", W2*(10**(-5.))            
 
-R3=line(61:70)    
-write(*,*)"Respuesta 3= ", R3           
+R3=line(61:67)    
+read(R3,*), W3
+exp3 = line (68:70)
+read(exp3,*), expW3
+write(*,*)"Respuesta 3= ", W3*(10**(-5.)) 
 
-R4=line(71:80)    
-write(*,*)"Respuesta 4= ", R4          
+R4=line(71:77)   
+read(R4,*), W4
+exp4 = line (78:80)
+read(exp4,*), expW4
+write(*,*)"Respuesta 4= ", W4*(10**(-5.))            
 
-R5=line(81:90)    
-write(*,*)"Respuesta 5= ", R5          
+R5=line(81:87)    
+read(R5,*), W5
+exp5 = line (88:90)
+read(exp5,*), expW5
+write(*,*)"Respuesta 5= ", W5*(10**(-5.))           
 
-R6=line(91:100)  
-write(*,*)"Respuesta 6= ", R6           
+R6=line(91:97)  
+read(R6,*), W6
+exp6 = line (98:100)
+read(exp6,*), expW6
+write(*,*)"Respuesta 6= ", W6*(10**(-5.))            
 
-R7=line(101:110)  
-write(*,*)"Respuesta 7= ", R7           
+R7=line(101:107) 
+read(R7,*), W7
+exp7 = line (108:110)
+read(exp7,*), expW7 
+write(*,*)"Respuesta 7= ", W7*(10**(-5.))            
 
-R8=line(111:120)  
-write(*,*)"Respuesta 8= ", R8           
+R8=line(111:117)  
+read(R8,*), W8
+exp8 = line (118:120)
+read(exp8,*), expW8
+write(*,*)"Respuesta 8= ", W8*(10**(-5.))            
 
-R9=line(121:130)  
-write(*,*)"Respuesta 9= ", R9           
+R9=line(121:127)
+read(R9,*), W9
+exp9 = line (128:130)
+read(exp9,*), expW9  
+write(*,*)"Respuesta 9= ", W9*(10**(-5.)) 
 
-R10=line(131:140) 
-write(*,*)"Respuesta 10= ", R10        
+R10=line(131:137) 
+read(R10,*), W10
+exp10 = line (138:140)
+read(exp10,*), expW10
+write(*,*)"Respuesta 10= ", W10*(10**(-5.))         
 
 read(*,*)
+!read( cnumber, '(F6.5)' )number
+
+ end do
 
 end program
