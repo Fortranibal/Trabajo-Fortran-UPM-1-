@@ -8,14 +8,14 @@ Character(len=2) :: Clase                                               ! Clase 
 character(len=500) line
 real :: W1,W2,W3,W4,W5,W6,W7,W8,W9,W10, expW1, expW2, expW3, expW4, expW5, expW6, expW7, expW8, expW9, expW10
 character (len=3) :: exp1, exp2, exp3, exp4, exp5, exp6, exp7, exp8, exp9, exp10 
-integer :: EoF !!
+
 
 
 open(unit=1, file= "p1_T7.txt")
 
 
  do 
- read(unit=1, iostat=EoF, fmt = '(A)') line                    !lector primera linea (fila)
+ read(unit=1, fmt = '(A)') line                    !lector primera linea (fila)
 
  read(*,*)
 
